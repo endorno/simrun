@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from cement.core.foundation import CementApp
 from cement.core.controller import CementBaseController, expose
-from sandbox import *
+from .core import *
 
 u"""
 Should call at project directory and use relative derived data path.
@@ -15,6 +15,7 @@ usage:
 -- develop --
 `simrun reload`
 """
+
 
 class BaseController(CementBaseController):
     class Meta:
@@ -65,6 +66,10 @@ class App(CementApp):
         base_controller = 'base'
         handlers = [BaseController, DeviceController]
 
-if __name__ == '__main__':
+
+def main():
     with App() as app:
         app.run()
+
+if __name__ == '__main__':
+    main()

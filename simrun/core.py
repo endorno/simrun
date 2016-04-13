@@ -5,9 +5,7 @@ import json
 import os
 import subprocess
 import time
-
 import sys
-
 
 def exit_with_message(msg):
     sys.stderr.write(msg)
