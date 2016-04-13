@@ -1,0 +1,2 @@
+# simrun
+xcrun simctl wrapper
